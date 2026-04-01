@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema(
       password:{
         type: String,
         required: true,
-
+        minlength : 6,
       }  ,
       role:{
         type: String,
@@ -20,5 +20,5 @@ const userSchema = new mongoose.Schema(
     }
 );
 
-const User = mongoose.model(userSchema);
+const User = mongoose.model("User",userSchema);
  export default User;
